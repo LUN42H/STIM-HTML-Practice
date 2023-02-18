@@ -1,0 +1,70 @@
+<head>
+    <title></title>
+    <link rel = 'stylesheet' href = 'https://fonts.googleapis.com/css2?family=Raleway&display=swap' />
+    <link rel = 'stylesheet' href = 'stim_style.css' />
+    <script src = "stim_task.js"></script>
+</head>
+ 
+<body>
+    <!--title-->
+    <h1 id = "h" class = "title"></h1>
+
+    <!--play video-->
+    <p style = "line-height: 100px; width: 400px;"></p>
+    <div>
+        <video id = "vid" autoplay muted width = "600" height = "500">
+            <source src="5801_hug.mp4" type = "video/mp4">
+        </video>
+    </div>
+
+    <p style = "height: 1px; width: 10px;"></p>
+
+    <!--buttons-->
+    <div class = "container">
+        <button class = "button" onclick = "clickReplay()" type = "button">Replay</button> 
+
+        <p style = "line-height: 10px; width: 50px;"></p>
+        <button class = "button" onclick = "clickNext()" type = "button">Next</button> 
+
+        <p style = "line-height: 10px; width: 50px;"></p>
+        <button class = "button" onclick = "clickInstruction()" type = "button">Instruction</button>    
+     </div>
+
+    <p style = "height: 15px; width: 10px;"></p>
+
+    <!--labels-->
+    <div class = "container">
+        <label class = "label" for = "label">Choose a label:</label>
+        <p style = "line-height: 10px; width: 10px;"></p>
+        <select class = "selection" name = "label" id = "labelSelected">
+            <option value = "accompany">Accompany</option>
+            <option value = "approach">Approach</option>
+            <option value = "avoid">Avoid</option>
+            <option value = "bother">Bother</option>
+            <option value = "capture">Capture</option>
+            <option value = "creep up on">Creep up on</option>
+            <option value = "encircle">Encircle</option>
+            <option value = "escape">Escape</option>
+            <option value = "examine">Examine</option>
+            <option value = "flight">Flight</option>
+            <option value = "flirt">Flirt</option>
+            <option value = "follow">Follow</option>
+            <option value = "herd">Herd</option>
+            <option value = "hit">Hit</option>
+            <option value = "huddle with">Huddle with</option>
+            <option value = "hug">Hug</option>
+            <option value = "ignore">Ignore</option>
+            <option value = "kiss">Kiss</option>
+            <option value = "lead">Lead</option>
+            <option value = "leave">Leave</option>
+            <option value = "poke">Poke</option>
+            <option value = "pull">Pull</option>
+            <option value = "push">Push</option>
+            <option value = "scratch">Scratch</option>
+            <option value = "talk">Talk</option>
+            <option value = "throw">Throw</option>
+            <option value = "tickle">Tickle</option>
+        </select>
+    </div>
+
+</body>
