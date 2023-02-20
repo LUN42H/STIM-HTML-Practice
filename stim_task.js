@@ -1,6 +1,7 @@
-const STIM_PATH = 'stim/27movies/';
+const STIM_PATH = '27movies/';
 const VID_LIST = [
-    '1012_push.mp4', '1145_leave.mp4', '4397_hug.mp4', '4408_lead.mp4', '5407_kiss.mp4', 
+    '5801_hug.mp4',
+    "1012_push.mp4", '1145_leave.mp4', '4397_hug.mp4', '4408_lead.mp4', '5407_kiss.mp4', 
     '5787_accompany.mp4', '5809_pull.mp4', '5814_talk to.mp4', '5816_ignore.mp4', '5843_huddle with.mp4', 
     '5847_approach.mp4', '5849_approach.mp4', '5866_follow.mp4', '5870_poke.mp4', '5871_pull.mp4', 
     '5875_escape.mp4', '5878_follow.mp4', '5902_hit.mp4', '5905_encircle.mp4', '5908_creep up on.mp4', 
@@ -10,10 +11,10 @@ const VID_LIST = [
     '6016_scratch.mp4', '6079_bother.mp4', '6035_capture.mp4', '6034_avoid.mp4', '6023_hit.mp4', 
     '6017_encircle.mp4'
 ];
-const TRIAL_LIST = shuffle_array(VID_LIST);
-var labelList = [];
-var index     = 0
-var duration  = document.querySelector('#vid').duration;
+const li = [0, 1];
+// const TRIAL_LIST = shuffle_array(VID_LIST);
+const labelList  = [];
+var indexVid     = 0;
 var selectedItem;
 
 // button functions
@@ -40,12 +41,14 @@ function clickNext() {
         return;
     }
 
-    labelList.push(selectedItem);
-    index ++;
+    // labelList.push(selectedItem); ??
+    indexVid ++;
+    // alert(1);
 
-    if (index >= 27) {
-       this.end();
+    if (indexVid >= VID_LIST.length) {
+        this.end();
     }
+
     else {
         this.showNew(); 
     }
@@ -53,9 +56,8 @@ function clickNext() {
 
 // display new video
 function showNew() {
-    // hide video
-    // show response box
-    // show new buttons
+    document.getElementById("labelSelected").value = "select";
+    document.getElementById("vid").src = [STIM_PATH + VID_LIST[indexVid]];
 }
 
 // end of experiment
