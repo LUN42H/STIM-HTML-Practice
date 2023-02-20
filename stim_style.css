@@ -10,11 +10,12 @@ div {
     color: black;
     font-weight: bolder;
     text-align: center;
-    background-color:rgb(236, 234, 234);
+    background-color:rgb(240, 239, 239);
     width: 120px;
-    height: 35px;
+    height: 32px;
     float: left;
     cursor: pointer;
+    border-radius: 3px;
     font-size: 18;
 }
 
