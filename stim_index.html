@@ -13,7 +13,7 @@
     <p style = "line-height: 100px; width: 400px;"></p>
     <div>
         <video id = "vid" autoplay muted width = "600" height = "500">
-            <source src="5801_hug.mp4" type = "video/mp4">
+            <source src = "5801_hug.mp4" type = "video/mp4">
         </video>
     </div>
 
@@ -21,10 +21,10 @@
 
     <!--buttons-->
     <div class = "container">
-        <button class = "button" onclick = "clickReplay()" type = "button">Replay</button> 
+        <button id = "replayButton" class = "button" onclick = "clickReplay()" type = "button">Replay</button> 
 
         <p style = "line-height: 10px; width: 50px;"></p>
-        <button class = "button" onclick = "clickNext()" type = "button">Next</button> 
+        <button class = "button" id = "n" onclick = "clickNext()" type = "button">Next</button> 
 
         <p style = "line-height: 10px; width: 50px;"></p>
         <button class = "button" onclick = "clickInstruction()" type = "button">Instruction</button>    
@@ -34,10 +34,10 @@
 
     <!--labels-->
     <div class = "container">
-        <label class = "label" for = "label">Choose a label:</label>
+        <label class = "label">Select a label:</label>
         <p style = "line-height: 10px; width: 10px;"></p>
-        <select class = "selection" name = "label" id = "labelSelected">
-            <option value = "select">--- Select ---</option>
+        <select class = "selection" id = "labelSelected">
+            <option value = "select">--- select ---</option>
             <option value = "accompany">Accompany</option>
             <option value = "approach">Approach</option>
             <option value = "avoid">Avoid</option>
@@ -47,6 +47,7 @@
             <option value = "encircle">Encircle</option>
             <option value = "escape">Escape</option>
             <option value = "examine">Examine</option>
+            <option value = "fight">Fight</option>
             <option value = "flight">Flight</option>
             <option value = "flirt">Flirt</option>
             <option value = "follow">Follow</option>
@@ -62,7 +63,7 @@
             <option value = "pull">Pull</option>
             <option value = "push">Push</option>
             <option value = "scratch">Scratch</option>
-            <option value = "talk">Talk</option>
+            <option value = "talk to">Talk to</option>
             <option value = "throw">Throw</option>
             <option value = "tickle">Tickle</option>
         </select>
