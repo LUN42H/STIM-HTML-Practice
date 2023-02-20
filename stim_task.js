@@ -11,18 +11,18 @@ const VID_LIST = [
     '6017_encircle.mp4'
 ];
 const TRIAL_LIST = shuffle_array(VID_LIST);
-
-var media     = document.querySelector('#vid');
 var labelList = [];
 var index     = 0
-var duration  = media.duration;
+var duration  = document.querySelector('#vid').duration;
 var selectedItem;
 
 // button functions
 function clickReplay() {
-    // alert(1);
-    media.currentTime = 0;
-    media.play();
+    if (!document.querySelector('#vid').ended) {
+        return;
+    }
+    document.querySelector('#vid').currentTime = 0;
+    document.querySelector('#vid').play();
 } 
 
 function clickInstruction() {
@@ -30,6 +30,10 @@ function clickInstruction() {
 }
 
 function clickNext() {
+    if (!document.querySelector('#vid').ended) {
+        return;
+    }
+
     var selectedItem = document.querySelector('#labelSelected').value;
     if (selectedItem == "select") { // select a value before proceeding
         alert("Please select a label.");
