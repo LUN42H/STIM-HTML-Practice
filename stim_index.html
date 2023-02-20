@@ -9,9 +9,12 @@
     <!--title-->
     <h1 id = "h" class = "title"></h1>
 
+    <!--free response-->
+    <div id = "divResponse" class = "divResponse"></div>
+
     <!--play video-->
     <p style = "line-height: 100px; width: 400px;"></p>
-    <div>
+    <div id = "divVideo">
         <video id = "vid" autoplay muted width = "600" height = "500">
             <source src = "5801_hug.mp4" type = "video/mp4">
         </video>
@@ -20,7 +23,7 @@
     <p style = "height: 1px; width: 10px;"></p>
 
     <!--buttons-->
-    <div class = "container">
+    <div id = "divButton" class = "container">
         <button class = "button" onclick = "clickReplay()" type = "button">Replay</button> 
 
         <p style = "line-height: 10px; width: 50px;"></p>
@@ -29,11 +32,10 @@
         <p style = "line-height: 10px; width: 50px;"></p>
         <button class = "button" onclick = "clickInstruction()" type = "button">Instruction</button>    
      </div>
-
     <p style = "height: 15px; width: 10px;"></p>
 
     <!--labels-->
-    <div class = "container">
+    <div id = "divLabel" class = "container">
         <label class = "label">Select a label:</label>
         <p style = "line-height: 10px; width: 10px;"></p>
         <select class = "selection" id = "labelSelected">
@@ -68,5 +70,8 @@
             <option value = "tickle">Tickle</option>
         </select>
     </div>
+
+     <!--ending-->
+     <p1 id = "end" class = "end"></p1>
 
 </body>
